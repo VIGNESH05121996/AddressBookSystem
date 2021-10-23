@@ -78,5 +78,21 @@ namespace AddressBook
                 Console.WriteLine("First Name:" + firstName + "\nLast Name:" + lastName + "\nAddress:" + address + "\nCity:" + city + "\nState:" + state + "\nZIP:" + zip + "\nPhone Number:" + phoneNumber + "\nEmail:" + email);
             }
         }
+
+        public void EditDetails(string firstName)
+        {
+            if (this.firstName == firstName)
+            {
+                Console.WriteLine("\n Enter new name: ");
+                string editedName = Convert.ToString(Console.ReadLine());
+                contact.Add(editedName);
+                Console.WriteLine("\n Name Edited Sucessfully..");
+                Console.WriteLine("First Name:" + editedName + "\nLast Name:" + lastName + "\nAddress:" + address + "\nCity:" + city + "\nState:" + state + "\nZIP:" + zip + "\nPhone Number:" + phoneNumber + "\nEmail:" + email);
+            }
+            else
+            {
+                Console.WriteLine("\n Don't edited to existing data..");
+            }
+        }
     }
 }

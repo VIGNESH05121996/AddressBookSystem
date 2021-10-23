@@ -9,6 +9,7 @@ namespace AddressBook
             Console.WriteLine("Welcome To Address Book");
             ContactList clist1 = new ContactList();
             clist1.ContList();
+            clist1.EditDetails("vignesh");
         }
     }
 }

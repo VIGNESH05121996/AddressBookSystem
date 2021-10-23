@@ -12,57 +12,71 @@ namespace AddressBook
         public string firstName, lastName, address, city, state, zip, phoneNumber, email;
         public void ContList()
         {
-            for (int i = 1; i <= 8; i++)
+            Console.WriteLine("Enter How Many Contacts You Want To Add To The Address Book");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
             {
-                switch (i)
+                for (int j = 1; j <= 8; j++)
                 {
-                    case 1:
-                        firstName = "VIGNESH";
-                        contact.Add(firstName);
-                        break;
+                    switch (j)
+                    {
+                        case 1:
+                            Console.WriteLine("\nFirst Name:");
+                            firstName = Convert.ToString(Console.ReadLine());
+                            contact.Add(firstName);
+                            break;
 
-                    case 2:
-                        lastName = "MUTHU";
-                        contact.Add(lastName);
-                        break;
+                        case 2:
+                            Console.WriteLine("Last Name:");
+                            lastName = Convert.ToString(Console.ReadLine());
+                            contact.Add(lastName);
+                            break;
 
-                    case 3:
-                        address = "HAPP";
-                        contact.Add(address);
-                        break;
+                        case 3:
+                            Console.WriteLine("Address:");
+                            address = Convert.ToString(Console.ReadLine());
+                            contact.Add(address);
+                            break;
 
-                    case 4:
-                        city = "TRICHY";
-                        contact.Add(city);
-                        break;
+                        case 4:
+                            Console.WriteLine("City:");
+                            city = Convert.ToString(Console.ReadLine());
+                            contact.Add(city);
+                            break;
 
-                    case 5:
-                        state = "TAMIL NADU";
-                        contact.Add(state);
-                        break;
+                        case 5:
+                            Console.WriteLine("State:");
+                            state = Convert.ToString(Console.ReadLine());
+                            contact.Add(state);
+                            break;
 
-                    case 6:
-                        zip = "620025";
-                        contact.Add(zip);
-                        break;
+                        case 6:
+                            Console.WriteLine("ZIP:");
+                            zip = Convert.ToString(Console.ReadLine());
+                            contact.Add(zip);
+                            break;
 
-                    case 7:
-                        phoneNumber = "123456789";
-                        contact.Add(phoneNumber);
-                        break;
+                        case 7:
+                            Console.WriteLine("Phone Number:");
+                            phoneNumber = Convert.ToString(Console.ReadLine());
+                            contact.Add(phoneNumber);
+                            break;
 
-                    case 8:
-                        email = "vicky@gmail.com";
-                        contact.Add(email);
-                        break;
+                        case 8:
+                            Console.WriteLine("Email:");
+                            email = Convert.ToString(Console.ReadLine());
+                            contact.Add(email);
+                            break;
 
-                    default:
-                        Console.WriteLine("\nCannot Display Details");
-                        break;
+                        default:
+                            Console.WriteLine("Details to be entered is out of range ");
+                            break;
 
+                    }
                 }
+                Console.WriteLine("\nAdded Contact List To The Address Book");
+                Console.WriteLine("First Name:" + firstName + "\nLast Name:" + lastName + "\nAddress:" + address + "\nCity:" + city + "\nState:" + state + "\nZIP:" + zip + "\nPhone Number:" + phoneNumber + "\nEmail:" + email);
             }
-            Console.WriteLine("First Name:" + firstName + "\nLast Name:" + lastName + "\nAddress:" + address + "\nCity:" + city + "\nState:" + state + "\nZIP:" + zip + "\nPhone Number:" + phoneNumber + "\nEmail:" + email);
         }
     }
 }

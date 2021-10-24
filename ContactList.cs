@@ -8,6 +8,7 @@ namespace AddressBook
 {
     class ContactList
     {
+        //multiple contact
         List<string> contact = new List<string>();
         public string firstName, lastName, address, city, state, zip, phoneNumber, email;
         public void ContList()
@@ -76,20 +77,6 @@ namespace AddressBook
                 }
                 Console.WriteLine("\nAdded Contact List To The Address Book");
                 Console.WriteLine("First Name:" + firstName + "\nLast Name:" + lastName + "\nAddress:" + address + "\nCity:" + city + "\nState:" + state + "\nZIP:" + zip + "\nPhone Number:" + phoneNumber + "\nEmail:" + email);
-            }
-        }
-
-        public void EditDetails(string firstName)
-        {
-            if (this.firstName == firstName)
-            {
-                contact.Remove(firstName);
-                Console.WriteLine("\n Person Name Removed..");
-            }
-            else
-            {
-                Console.WriteLine("\n Cannot remove Name..");
-                Console.WriteLine("First Name:"+firstName+"\nLast Name:" + lastName + "\nAddress:" + address + "\nCity:" + city + "\nState:" + state + "\nZIP:" + zip + "\nPhone Number:" + phoneNumber + "\nEmail:" + email);
             }
         }
     }
